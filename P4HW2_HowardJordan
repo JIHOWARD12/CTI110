@@ -1,0 +1,58 @@
+# CTI-110
+# P4HW2 - Salary Calculator
+# Jordan Howard
+# 12/5/2023
+
+# Initialize variables for total overtime, total regular pay, total gross pay, and number of employees
+overtime_total = 0
+regular_pay_total = 0
+gross_pay_total = 0
+employee_count = 0
+
+# Start a loop to gather employee information
+while True:
+    # Ask the user for employee name or "Done" to terminate
+    employee_name = input("Enter employee name (or 'Done' to finish): ")
+
+    # Check if the user wants to terminate
+    if employee_name.lower() == "done":
+        break
+
+    # Increment the employee count
+    employee_count += 1
+
+    # Ask the user for hours worked and pay rate for the employee
+    hours_worked = float(input(f"How many hours did {employee_name} work? "))
+    pay_rate = float(input(f"What is {employee_name}'s pay rate? "))
+
+    # Calculate regular pay and overtime pay
+    if hours_worked > 40:
+        regular_hours = 40
+        overtime_hours = hours_worked - 40
+    else:
+        regular_hours = hours_worked
+        overtime_hours = 0
+
+    regular_pay = regular_hours * pay_rate
+    overtime_pay = overtime_hours * (pay_rate * 1.5)
+
+    # Calculate gross pay
+    gross_pay = regular_pay + overtime_pay
+
+    # Display employee name
+    print(f"\nEmployee Name: {employee_name}")
+
+    # Display table header for the current employee
+    print("\nEmployee Details:")
+    print("{:<15} {:<10} {:<15} {:<15} {:<15}".format("Hours Worked", "Pay Rate", "Overtime Hours", "Overtime Pay", "Regular Pay"))
+    print("-" * 80)
+
+    # Display employee details in table format
+    print("{:<15} {:<10} ${:<15.2f} {:<15} ${:<15.2f}".format(hours_worked, pay_rate, overtime_hours, overtime_pay, regular_pay))
+
+# Display overall results
+print("\nEmployee Summary:")
+print(f"Total number of employees: {employee_count}")
+print(f"Total amount paid for regular hours: ${regular_pay_total:.2f}")
+print(f"Total amount paid for overtime: ${overtime_total:.2f}")
+print(f"Total amount paid in gross: ${gross_pay_total:.2f}")
