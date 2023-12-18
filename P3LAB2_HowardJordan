@@ -1,0 +1,31 @@
+# CTI 110
+# Jordan Howard
+# 11/20/2023
+# P3LAB2 - Letter Grade Conversion
+
+
+print("What is the number grade: ")
+
+grade_score = int(input())
+
+grade = "F"
+
+
+if grade_score >= 90:
+  grade = "A"
+
+elif grade_score >= 80:
+  grade = "B"
+
+elif grade_score >= 70:
+  grade = "C"
+
+elif grade_score >= 60:
+  grade = "D"
+
+else:
+  grade  = "F"
+
+
+print("Your letter grade is: ", grade)
+
