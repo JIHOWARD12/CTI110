@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Database</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>User Database</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>User ID</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Date Signed Up</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Randomly generated user entries -->
+            <tr>
+                <td>1</td>
+                <td>john_doe</td>
+                <td>Passw0rd</td>
+                <td>2023-05-15</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>alice_smith</td>
+                <td>Secret123</td>
+                <td>2023-05-16</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>user123</td>
+                <td>SecurePwd</td>
+                <td>2023-05-17</td>
+            </tr>
+            <!-- ... Repeat for the remaining 7 entries ... -->
+        </tbody>
+    </table>
+
+    <form id="userForm">
+        <h3>Create an Account</h3>
+        <label for="newUsername">Username:</label>
+        <input type="text" id="newUsername" name="newUsername" required>
+
+        <label for="newPassword">Password:</label>
+        <input type="password" id="newPassword" name="newPassword" required>
+
+        <input type="submit" value="Create Account">
+    </form>
+
+    <script>
+        document.getElementById("userForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const newUsername = document.getElementById("newUsername").value;
+            const newPassword = document.getElementById("newPassword").value;
+
+            // Get the current date
+            const currentDate = new Date();
+            const formattedDate = `${currentDate.getFullYear()}-${(currentDate.getMonth() + 1)
+                .toString()
+                .padStart(2, "0")}-${currentDate.getDate().toString().padStart(2, "0")}`;
+
+            const table = document.querySelector("table tbody");
+            const newRow = table.insertRow(-1);
+            const cell1 = newRow.insertCell(0);
+            const cell2 = newRow.insertCell(1);
+            const cell3 = newRow.insertCell(2);
+            const cell4 = newRow.insertCell(3);
+
+            cell1.textContent = table.rows.length; // Auto-increment User ID
+            cell2.textContent = newUsername;
+            cell3.textContent = newPassword;
+            cell4.textContent = formattedDate;
+
+            // Clear the form fields
+            document.getElementById("newUsername").value = "";
+            document.getElementById("newPassword").value = "";
+        });
+    </script>
+
+</body>
+
+</html>
