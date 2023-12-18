@@ -1,0 +1,20 @@
+# CTI 110
+
+# P4LAB1 B
+
+# Jordan Howard
+
+# 11/20/2023
+
+
+height = int(input("Please enter height "))
+width = int(input("Please enter width "))
+
+print(" ")
+
+for x in range(height):
+    
+  for y in range(width):
+  
+    print("*", end =" ")
+  print(" ")
