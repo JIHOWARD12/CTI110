@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A World Without Fans</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>A World Without Fans</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="review.html">Fan Reviews</a>
+        <a href="theories.html">Fan Theories</a>
+        <a href="suggestions.html">Fan Suggestions</a>
+        <a href="donation.html">Donation</a>
+        <a href="fanartwork.html">Fan Artwork</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="#portfolio" target="_blank">GitHub Portfolio</a>
+    </nav>
+
+    <section id="home">
+        <div class="jumbotron">
+            <h2>Welcome to A World Without Fans</h2>
+            <p>
+                Explore the fascinating world of fan contributions, theories, suggestions, reviews, artwork, and more! Connect
+                with other fans and be a part of this unique community.
+            </p>
+
+            <!-- Add the three images in the jumbotron -->
+            <img src='Capture2.png' alt='Fan Artwork 1'>
+            <img src='Capture23.png' alt='Fan Artwork 2'>
+            <img src='CaptureRenegade.png' alt='Fan Artwork 3'>
+        </div>
+
+        <!-- Table for Upcoming Issues -->
+        <section id="upcoming-issues">
+            <h3>Upcoming Issues</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Issue Number</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2023-12-15</td>
+                        <td>Issue #34</td>
+                        <td>$3.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-01-10</td>
+                        <td>Issue #35</td>
+                        <td>$4.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-02-05</td>
+                        <td>Issue #36</td>
+                        <td>$3.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-03-20</td>
+                        <td>Issue #37</td>
+                        <td>$2.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-04-15</td>
+                        <td>Issue #38</td>
+                        <td>$4.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-05-10</td>
+                        <td>Issue #39</td>
+                        <td>$3.99</td>
+                    </tr>
+                    <tr>
+                        <td>2024-06-05</td>
+                        <td>Issue #40</td>
+                        <td>$2.99</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+
+    <section id="reviews">
+        <!-- Placeholder for the review page -->
+        <iframe src="review.html" width="100%" height="600px" frameborder="0"></iframe>
+    </section>
+
+    <section id="theories">
+        <!-- Fan Theories Section (You can keep this or remove as needed) -->
+        <!-- ... -->
+    </section>
+
+    <!-- Other Sections Here -->
+
+</body>
+
+</html>
