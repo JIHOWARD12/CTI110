@@ -1,0 +1,41 @@
+"""
+CTI 110
+P1HW1 _ Variables
+Howard
+9/5/23
+
+1. Do some basic output with numbers
+2. ask for an int
+3. square it and then cube it
+4. ask for another int
+5. add them and multiply them
+
+"""
+
+# variables, first and second
+first = 0
+second = 0
+
+print("Enter integer")
+first = int(input()) # take input, then convert it to int
+print(first, "squared is", first * first)
+print("and", first, "cubed is", first * first * first, "!!")
+
+# get another int
+print("Enter another integer:")
+second = int(input())
+#TODO: print the number, not the words first and second
+print(first, "=", second, "=", first + second)
+print(first, "*", second, "=", first * second)
+
+# PART TWO: MOVIES
+# Three variables
+# string - movie name
+# int - the year of the movie
+# float _ the gross (in million dollars)
+# stering - a quote
+name = "Spider-Man Across The Spiderverse"
+year = 2023
+gross = 689.34 # mil $
+
+print(name, "came out in", year, "and made", "$", gross, "million dollars worldwide at the box office!")
