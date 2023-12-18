@@ -1,0 +1,109 @@
+def main():
+  print("This is a program that considers multiple factors to see if you are eligible to join the NBA.")
+
+  # Call each function
+  age_result = age()
+  height_result = height()
+  middle_school_result = middle_school_teams()
+  high_school_result = high_school_teams()
+  college_result = college_school_teams()
+  gleague_result = gleague()
+  overseas_result = overseas()
+
+  # Analyze results
+  if age_result == "too_old" or height_result == "not_tall_enough" or (not middle_school_result and not high_school_result and not college_result and not gleague_result and not overseas_result):
+      print("Based on your answers, it's unlikely that you'll make it to the NBA.")
+  elif height_result == "tall_enough" and age_result == "old_enough" and (college_result or gleague_result or overseas_result):
+      print("Based on your answers, there's a high likelihood you'll make it to the NBA.")
+  else:
+      print("Based on your answers, it's a toss-up whether you'll make it to the NBA.")
+
+# Age 
+def age():
+  age = int(input("What is your age? "))
+  if age < 18:
+      print("You are not old enough to join the NBA")
+      return "too_young"
+  elif age > 38:
+      print("You are too old to join the NBA")
+      return "too_old"
+  else:
+      print("You are old enough to join the NBA")
+      return "old_enough"
+
+# Height
+def height():
+  height = int(input("What is your height in inches? "))
+  if height < 72:
+      print("You are not tall enough to join the NBA")
+      return "not_tall_enough"
+  else:
+      print("You are tall enough to join the NBA")
+      return "tall_enough"
+
+# Middle School
+def middle_school_teams():
+  mteam_input = input("Were you on your middle school basketball team? ").lower()
+  mteam = mteam_input == "yes"
+  if mteam:
+      print("You have more of a chance")
+      return True
+  else:
+      print("Your likelihood has decreased")
+      return False
+
+# High School
+def high_school_teams():
+  hteam_input = input("Were you on your high school basketball team? ").lower()
+  hteam = hteam_input == "yes"
+  if hteam:
+      print("Your chances have risen significantly")
+      return True
+  else:
+      print("Your likelihood has decreased significantly")
+      return False
+
+# College
+def college_school_teams():
+  cteam_input = input("Were you on your college basketball team? ").lower()
+  cteam = cteam_input == "yes"
+  if cteam:
+      print("Your chances have risen significantly")
+      college_type_input = input("Did you go to a D1, D2, or D3 school? ").lower()
+      if college_type_input == "d1":
+          print("Being from a D1 school is a great advantage!")
+      elif college_type_input == "d2":
+          print("Attending a D2 school is still a good factor.")
+      elif college_type_input == "d3":
+          print("Even from a D3 school, you have valuable experience.")
+      else:
+          print("Your college division is not recognized. Consider it in your evaluation.")
+      return True
+  else:
+      print("Your likelihood has decreased dramatically")
+      return False
+
+# G League
+def gleague():
+  gleague_input = input("Were you on your G League team? ").lower()
+  gleague = gleague_input == "yes"
+  if gleague:
+      print("Your chances have risen significantly")
+      return True
+  else:
+      print("Your likelihood has decreased dramatically")
+      return False
+
+# Overseas
+def overseas():
+  overseas_input = input("Did you ever play professional basketball overseas? ").lower()
+  overseas = overseas_input == "yes"
+  if overseas:
+      print("Your chances have risen significantly")
+      return True
+  else:
+      print("Your likelihood has decreased dramatically")
+      return False
+
+# Call the main function
+main()
