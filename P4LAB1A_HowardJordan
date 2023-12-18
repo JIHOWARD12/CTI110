@@ -1,0 +1,51 @@
+"""
+CTI 110
+P4LAB1A - Turtle shapes in loops
+Jordan Howard
+10/12/23
+"""
+import turtle
+import random
+
+t = turtle.Turtle()  # Use turtle.Turtle() instead of just turtle
+t.pensize(3)
+t.speed(9)
+
+# Set our variables
+COLORS = ["red", "blue", "green", "yellow", "orange", "purple"]
+
+REPEAT = 10
+for time in range(REPEAT):
+    X = random.randrange(-200, 200)
+    Y = random.randrange(-200, 200)
+    t.penup()
+    t.goto(X, Y)
+    t.pendown()
+    PEN_COLOR = random.choice(COLORS)
+    SIDES = 3
+    LENGTH = 100
+    FILL = True
+    FILL_COLOR = random.choice(COLORS)
+
+    # Optional: let the user pick
+    SIDES = random.randrange(3, 12)
+    LENGTH = random.randrange(10, 50)
+    ANGLE = 360 / SIDES
+
+    if FILL:
+        t.begin_fill()
+        t.fillcolor(FILL_COLOR)
+
+    # Draw a simple shape
+    t.pencolor(PEN_COLOR)
+    for side in range(SIDES):
+        # Draw the side of the shape
+        t.forward(LENGTH)
+        t.right(ANGLE)
+
+    if FILL:
+        t.end_fill()
+
+# Keep the window open (at the end)
+win = turtle.Screen()
+win.exitonclick()
