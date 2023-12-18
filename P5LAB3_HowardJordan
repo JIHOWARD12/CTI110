@@ -1,0 +1,83 @@
+# CTI 110
+# P5LAB3 - Quiz Show
+# Jordan Howard
+# 11/7/2023
+
+question_set = [
+    {
+        "question": "Which principle states 'Appear weak when you are strong, and strong when you are weak'?",
+        "choices": ['A) Deception', 'B) Offensive', 'C) Tactical', 'D) Defensive'],
+        "answer": 'A'
+    },
+    {
+        "question": "Which principle states 'All warfare is based on deception'?",
+        "choices": ['A) Deception', 'B) Offensive', 'C) Tactical', 'D) Defensive'],
+        "answer": 'A'
+    },
+    {
+        "question": "Which principle states 'Attack him where he is unprepared, appear where you are not expected'?",
+        "choices": ['A) Deception', 'B) Offensive', 'C) Tactical', 'D) Defensive'],
+        "answer": 'B'
+    },
+    {
+        "question": "Which principle states 'The best defense is a good offense'?",
+        "choices": ['A) Deception', 'B) Offensive', 'C) Tactical', 'D) Defensive'],
+        "answer": 'B'
+    },
+    {
+        "question": "Which principle states 'In battle, use the direct and the indirect approach simultaneously'?",
+        "choices": ['A) Deception', 'B) Offensive', 'C) Tactical', 'D) Defensive'],
+        "answer": 'C'
+    }
+]
+
+def welcome_message():
+    print("Welcome user to the Quiz Show!")
+    print(" ")
+    print("This is a game where you are asked a series of questions concerning a specific topic.")
+    print(" ")
+    print("Every time you get a question right, it adds to your score!")
+    print("However, if you do not get an answer right, you do not gain points!")
+    print(" ")
+    print("At the end, your total score will be displayed.")
+    print(" ")
+    print("Good Luck!")
+    print(" ")
+
+welcome_message()
+
+
+
+
+score = 0
+
+for question in question_set:
+    print(question["question"])
+    for choice in question["choices"]:
+        print(choice)
+    print()
+  
+    user_answer = input("Enter your answer: ")
+
+    if user_answer == question["answer"]:
+      score += 1
+      print("Correct!! Your Score is currently:", score)
+    else:
+      print("Sorry buddy, you got it WRONG!!!")
+
+
+print("Your score:", score)
+
+
+if score == 1:
+  print("You Suck!")
+elif score == 2:
+  print("Better luck next time buddy!")
+elif score == 3:
+  print("OK, OK you did decent")
+elif score == 4:
+  print("You did pretty good")
+elif score == 5:
+  print("You won the game! Collect $500,000!")
+else:
+  print("You are a legend!")
