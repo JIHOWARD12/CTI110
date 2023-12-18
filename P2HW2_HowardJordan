@@ -1,0 +1,42 @@
+#CTI-110
+#P2HW2-Lists
+#Name: Jordan Howard
+#Date: 10/11/2023
+
+#Explanation of program
+
+print("This is a program that takes the grades of 6 modules andin return gives you the highest grade, thelowest grade, the sum of grades, and your average. ")
+
+print()
+
+# User inputs grades for each module
+
+Module1 = float(input('Enter grade for Module 1: '))
+Module2 = float(input('Enter grade for Module 2: '))
+Module3 = float(input('Enter grade for Module 3: '))
+Module4 = float(input('Enter grade for Module 4: '))
+Module5 = float(input('Enter grade for Module 5: '))
+Module6 = float(input('Enter grade for Module 6: '))
+
+# List that stores module grades
+
+List = [Module1, Module2, Module3, Module4, Module5, Module6]
+
+# Creates Highest grade, Lowest grade, Sum, and AVerage
+
+Lowestgrade = min(List)
+Highestgrade = max(List)
+Sum = sum(List)
+Average = Sum/6
+
+print ()
+
+# Results are outputted
+
+print('------------Results------------')
+
+print('Lowest Grade: ', Lowestgrade)
+print('Highest Grade: ', Highestgrade)
+print('Sum: ', Sum)
+print('Average: ', Average)
+print('-------------------------------')
