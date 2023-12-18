@@ -1,0 +1,23 @@
+# Input four floating-point numbers
+
+num1 = float(input())
+num2 = float(input())
+num3 = float(input())
+num4 = float(input())
+
+# Calculate the product and average
+
+product = num1 * num2 * num3 * num4
+average = (num1 + num2 + num3 + num4) /4
+
+
+# Output the product and average as rounded integers
+
+print('{:.0f}'.format(product))
+print('{:.0f}'.format(average))
+
+
+# Output the product and average as floating-point numbers with 3 decimal places
+
+print('{:.3f}'.format(product))
+print('{:.3f}'.format(average))
