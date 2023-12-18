@@ -1,0 +1,30 @@
+# Create a function called driving_cost with three inputs: milesPerGallon, dollarsPerGallon, and milesDriven
+
+def driving_cost(miles_per_gallon, dollars_per_gallon, miles_driven):
+
+  
+    # Calculate the cost of driving and return the result
+    cost = miles_driven * (1.0 / miles_per_gallon) * dollars_per_gallon
+    return cost
+
+# Define the main function
+def main():
+  
+    # Get the miles per gallon and dollars per gallon from the user of progam
+    miles_per_gallon = float(input("Enter miles per gallon: "))
+    dollars_per_gallon = float(input("Enter cost per gallon: "))
+    
+    # Calculate and print the cost for driving 10, 50, and 400 miles
+    cost_10_miles = driving_cost(miles_per_gallon, dollars_per_gallon, 10)
+    cost_50_miles = driving_cost(miles_per_gallon, dollars_per_gallon, 50)
+    cost_400_miles = driving_cost(miles_per_gallon, dollars_per_gallon, 400)
+    
+    # Print the results with two decimal places
+    print("Cost for 10 miles: {:.2f}".format(cost_10_miles))
+    print("Cost for 50 miles: {:.2f}".format(cost_50_miles))
+    print("Cost for 400 miles: {:.2f}".format(cost_400_miles))
+
+# Check if the script is being run directly (not imported as a module)
+if __name__ == "__main__":
+    # Call the main function to start the program
+    main()
