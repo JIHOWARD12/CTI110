@@ -1,0 +1,36 @@
+# CTI-110
+# P3HW2 - Salary
+# Jordan Howard
+# 11/20/2023
+
+# Get employee information from user input
+name = input("Enter employee's name: ")
+hours = float(input("Enter number of hours worked: "))
+pay = float(input("Enter employee's pay rate: $"))
+
+# Calculate overtime pay, regular pay, and gross pay
+overtime_amount = 0
+
+if hours > 40:
+    overtime_hours = hours - 40
+    overtime_amount = overtime_hours * (pay * 1.5)  # Corrected the formula for overtime pay
+    reg_pay = 40 * pay
+else:
+    overtime_hours = 0
+    reg_pay = hours * pay
+
+gross_pay = reg_pay + overtime_amount
+
+# Display the payroll stub with longer rows and shorter columns
+print("-------------------------------------------------------------")
+print("Payroll Stub")
+print("-------------------------------------------------------------")
+print(f"Employee Name:   {name}")
+print("-------------------------------------------------------------")
+
+# Values in the same row with a line separator
+print(f"Hours Worked:    {hours}    -   Pay Rate:       ${pay}")
+print(f"Overtime Pay:    ${overtime_amount}   -   Regular Pay:    ${reg_pay}   -   Gross Pay:       ${gross_pay}")
+
+# Long line separator
+print("-------------------------------------------------------------")
