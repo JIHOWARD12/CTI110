@@ -1,0 +1,64 @@
+<!-- CTI 110 -->
+<!-- Jordan Howard -->
+<!-- 12/5/2023 -->
+<!-- Welcome to my website WH1 -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Website</title>
+</head>
+
+<body>
+
+    <header>
+        <img src="web.jpg" alt="Web Image">
+        <h1>Welcome to My Website</h1>
+        <nav>
+            <strong>Home</strong>
+            <strong>Content</strong>
+            <strong>Form</strong>
+            <strong>Google</strong>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Lorem Ipsum</h2>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+            dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </section>
+
+    <nav>
+        <h2>Numbered List</h2>
+        <ol>
+            <li>One  ···········</li>
+            <li>Two  ···········</li>
+            <li>Three  ···········</li>
+        </ol>
+    </nav>
+
+    <section>
+        <h2>Address Block</h2>
+        <address>
+            123 Main Street<br>
+            Fayetteville, NC 28303<br>
+            <a href="mailto:info@example.com">info@example.com</a>
+        </address>
+    </section>
+
+    <footer>
+        <p><strong>Copyrights</strong> &copy; 2021 Jordan Howard</p>
+        <strong>Contact Us</strong>
+    </footer>
+
+</body>
+
+</html>
