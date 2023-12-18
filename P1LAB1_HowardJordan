@@ -1,0 +1,19 @@
+"""
+CTI 110
+P1LAB1
+Jordan
+8/24/2023
+"""
+
+# Say hello to the user
+print("Hello! What's your name?")
+
+#name = "Jordan"
+# get the users's name
+name = input()
+print(name, "is a nice name!")
+print("How old are you?")
+age = int(input())
+if age > 55:
+  print("WOW your old")
+
