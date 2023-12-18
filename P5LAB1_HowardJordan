@@ -1,0 +1,151 @@
+# CTI 110
+# P5LAB1 - CYOA
+# Jordan Howard
+# 10/26
+# Feel free to fork this REPL and make changes.
+
+# first function: main_menu().
+def main_menu():
+    print("Main Menu")
+    print("You're in front of a spooky old house...")
+    print("Do you:")
+    print("1. Try the front door")
+    print("2. Sneak around back")
+    print("3. Forget it and go home")
+    print("4. [Quit]")
+    choice = input("Choose: ")
+    if choice == '1':
+        choice_front_door()
+    elif choice == '2':
+        # Call choice 2 here (You can add the corresponding function)
+        print("There is a dog who starts chasing you")
+        choice_run_away()
+    elif choice == '3':
+        # Call choice 3 here (You can add the corresponding function)
+        print("You stop at CookOut and someone asks what you would like to order")
+      
+        choice_order()
+    elif choice == '4':
+        print("Ok, quitting the game")
+        return
+    else:
+        print("That's not a valid choice, please try again.")
+        main_menu()
+
+def choice_order():
+    print("We're waiting...")
+    print("1. A Cheeseburger")
+    print("2. A Hotdog")
+    print("3. BBQ")
+    choice = input("Choose: ")
+    if choice == '1':
+      print("The person who serves your food is a killer clown! YOURE DEAD")
+    elif choice == '2':
+      print("The person who serves your food is a killer clown! YOURE DEAD")
+    elif choice == '3':
+      print("The person who serves your food is a killer clown! YOURE DEAD")
+
+
+
+
+
+# now we have the choice functions. Feel free to add more.
+def choice_front_door():
+    print("Try the front door.")
+    print("It's locked.")
+    print("Do you:")
+    print("1. Check around back")
+    print("2. Give up and go home")
+    print("3. Pick the lock (Open Front door quietly)")
+    print("4. Kick it down (Open Front door noisily)")
+    choice = input("Choose: ")
+    if choice == '1':
+        choice_back_door()
+    elif choice == '2':
+        choice_go_home()
+    elif choice == '3':
+        print("You sneak inside the house undetected")
+        choice_sneaky()
+    elif choice == '4':
+        print("BOOM! The door swings open! Someone spots you and chases you out of the house.")
+        choice_run_away()
+    else:
+        print("That's not a valid choice, please try again.")
+        choice_front_door()
+
+def choice_sneaky():
+    print("You're inside!")
+    print("You see multiple rooms")
+    print("Do you:")
+    print("1. Enter the kitchen")
+    print("2. Go up the stairs")
+    print("3. Check out the living room")
+    print("4. Go down the basement")
+    choice = input("Choose: ")
+    if choice == '1':
+        print("You walk inside the kitchen, and spiders start to fall on you from the ceiling")
+        choice_spiders()
+    elif choice == '2':
+        print("The stairs make creaking sounds! You've been spotted!!")
+        choice_run_away()
+    elif choice == '3':
+        print("There is a flashlight on the couch without batteries")
+        choice_flashlight()
+    else:
+        print("That's not a valid choice, The clown has killed you! Respawn")
+        choice_sneaky()
+
+def choice_flashlight():
+    print("You start to look around for batteries but find a dead body under the couch!")
+    print("Do you:")
+    print("1. Scream")
+    print("2. Go home")
+    print("3. Continue searching")
+
+    choice = input("Choose: ")
+    if choice == '1':
+        print("You scream! The Killer Clown has spotted you!")
+        choice_run_away()
+    elif choice == '2':
+        print("It ain't worth it; you just go home...")
+        choice_go_home()
+    elif choice == '3':
+        print("You find batteries in a drawer")
+        # Add your logic for what happens next
+    else:
+        print("That's not a valid choice, The clown has killed you! Respawn")
+        choice_sneaky()
+
+def choice_spiders():
+    print("You scream! Now you've been spotted!!!")
+    choice_run_away()
+
+def choice_run_away():
+    print("The killer clown is chasing you!!!")
+    print("There is a fence up ahead")
+    print("Do you:")
+    print("1. Jump over")
+    print("2. Run around")
+    print("3. Turn around and fight")
+    choice = input("Choose: ")
+    if choice == '1':
+        print("You jump over the fence and slip on a rock.")
+    elif choice == '2':
+        print("You run around the fence but run into a sign")
+    elif choice == '3':
+        print("You turn around and fight but chicken out and keep running")
+    else:
+        print("That's not a valid choice, The clown has killed you!")
+
+def choice_back_door():
+    print("There is a KILLER DOG in the bavck that begins chasing you!!!")
+    choice_run_away()
+
+# finally, we have the main -- which we use to start the program
+def main():
+    print("M5LAB1 - Choose Your Own Adventure")
+    main_menu()
+    print("You're DEAD! Tough Luck Buddy...")
+
+# start the program
+main()
