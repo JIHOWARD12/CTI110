@@ -1,0 +1,32 @@
+import matplotlib.pyplot as plt
+import turtle
+
+# COLLECT THE DATA
+
+data = []  # An empty list to store the data
+num_days = turtle.numinput("Input", "How many days?")  # Ask the user for the number of days and convert it to an integer
+num_days = int(num_days)
+
+for day in range(num_days):
+    print("Day ", day + 1, ":", end="")
+    today = turtle.numinput("Next Day", "How many Pokemon?")
+    data.append(today)  # Add the number of Pokemon for the current day to the list
+
+# Calculate statistics
+total = sum(data)  # Calculate the total number of Pokemon caught
+average = total / num_days  # Calculate the average per day
+best_day = max(data)  # Find the best day (maximum)
+worst_day = min(data)  # Find the worst day (minimum)
+
+# Print statistics
+print("\nTotal Number of Pokeman Caught:", total)
+print("Best day:", best_day)
+print("Worst day:", worst_day)
+print("Average per day:", average)
+
+# Graph the data
+plt.plot(range(1, num_days + 1), data, marker='o')  # Create a line graph with markers
+plt.title("Pokemon Data")
+plt.xlabel('Day #')
+plt.ylabel('Pokemons Collected')
+plt.show()
