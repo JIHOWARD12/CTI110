@@ -1,0 +1,37 @@
+# This is a program that calculates the travel expenses based on the budget of the user.
+
+# Date: 10/11/2023
+
+# CTI-110 P2HW1 - Travel
+
+# Jordan Howard
+
+# Display text
+print('This program uses math to approximate travel expenses')
+
+# Ask for budget, destination, gas price, cost of hotel, and cost of food
+budget = float(input('Enter your budget: '))
+destination = input('Enter your travel destination: ')
+gasprice = float(input('How much will you spend on gas?: '))
+hotelprice = float(input('How much money will you need for a hotel?: '))
+food = float(input('Last, how much will you need for food?: '))
+
+# Calculate travel expenses and format the output
+print('------------Travel Expenses------------')
+print(f'Location: {destination}')
+print(f'Initial Budget: ${budget:.2f}')
+print(f'Fuel: ${gasprice:.2f}')
+print(f'Accommodation: ${hotelprice:.2f}')
+print(f'Food Price: ${food:.2f}')
+print('---------------------------------------')
+
+totalcost = gasprice + food + hotelprice
+remainingbalance = budget - totalcost
+
+# Determine remaining balance or if the user can afford the trip
+if totalcost > budget:
+    print('You cannot afford to make this trip')
+else:
+    print(f'Remaining Balance: ${remainingbalance:.2f}')
+
+
