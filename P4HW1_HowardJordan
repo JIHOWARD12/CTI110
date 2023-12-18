@@ -1,0 +1,53 @@
+# CTI 110
+# P4 HW1 - Score List
+# Jordan Howard
+# 11/14/2023
+
+score_list = []
+
+scores = int(input("How many scores do you want to enter? "))
+
+for _ in range(scores):
+    while True:
+        try:
+            score = float(input("Enter a score: "))
+            if score < 0 or score > 100:
+                if score < 0:
+                    print("Invalid score entered!!!")
+                    print("Please enter a score in the range of 0 to 100")
+                elif score > 100:
+                    print("Invalid score entered!!!")
+                    print("Please enter a score in the range of 0 to 100")
+            else:
+              score_list.append(score)
+              break
+        except ValueError:
+            print("Invalid input! Please enter a valid numeric score.")
+
+average = sum(score_list) / len(score_list)
+
+print("--------------Results--------------")
+print(" ")
+print("Lowest Score: ", min(score_list))
+
+min_score = min(score_list)
+
+score_list.remove(min_score)
+
+print("Modified List: ", score_list)
+
+print("Scores Average: ", average)
+
+if average >= 90:
+    print("Grade: A")
+elif average >= 80:
+    print("Grade: B")
+elif average >= 70:
+    print("Grade: C")
+elif average >= 60:
+    print("Grade: D")
+else:
+    print("Grade: F")
+
+
+
